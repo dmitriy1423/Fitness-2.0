@@ -1,0 +1,23 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-default-white;
+}
+
+.navigation__tel {
+  margin-top: -12px;
+  font-size: 26px;
+  letter-spacing: 0.76px;
+  color: $color-default-white;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    font-size: 24px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    margin-top: 0;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+  }
+}

@@ -1,7 +1,10 @@
 .btn {
   display: inline-flex;
-  padding: 24px 56px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 56px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
@@ -18,5 +21,9 @@
 
   @include hover-focus {
     opacity: 0.8;
+  }
+
+  @media (max-width: ($vp-1200 - 1)) {
+    padding: 18px 30px;
   }
 }

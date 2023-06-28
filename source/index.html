@@ -17,11 +17,48 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
+      <div class="header-and-hero-wrapper">
+        <header class="header">
+          <div class="container">
+            <nav class="navigation">
+              <a class="navigation__logo logo" href="#">
+                <img src="img/sprite/icon-logo.svg" width="122" height="44" alt="Логотип supergym.">
+              </a>
+              <a class="navigation__tel" href="tel:+78005555555">
+                8-800-555-55-55
+              </a>
+            </nav>
+          </div>
+        </header>
+        <section class="hero">
+          <div class="container">
+            <div class="hero__inner-wrapper">
+              <p class="hero__description">
+                Тренажёрный зал
+                Групповые занятия
+                Кардио-зона
+              </p>
+              <span class="hero__city">
+                Омск
+              </span>
+              <h1 class="hero__title">
+                Фитнес центр
+              </h1>
+              <button class="hero__button btn" type="button">
+                Купить абонемент
+              </button>
+            </div>
+            <div class="hero__image-wrapper">
+              <picture>
+                <source media="(max-width: 1199px)" srcset="img/hero-image-tablet@1x.jpg 1x, img/hero-image-tablet@2x.jpg 2x" width="324" height="390">
+                <img src="img/hero-image-desktop@1x.jpg" srcset="img/hero-image-desktop@1x.jpg 1x, img/hero-image-desktop@2x.jpg 2x" width="500" height="556" alt="">
+              </picture>
+            </div>
+          </div>
+        </section>
+      </div>
       <main>
-        <section class="intro">
+        <section>
           <div class="container">
           </div>
         </section>
