@@ -557,7 +557,7 @@ button,
 .container {
   width: 100%;
   max-width: 1920px;
-  min-width: 280px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 103px;
 }
@@ -1393,6 +1393,212 @@ button,
     -ms-grid-column-align: stretch;
         justify-self: stretch;
     margin-right: 0;
+  }
+}
+
+.gym {
+  background-color: #ffffff;
+}
+.gym .container {
+  padding: 120px 103px 235px 163px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 85px;
+}
+@media (max-width: 1199px) {
+  .gym .container {
+    padding: 100px 45px 183px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    gap: 42px;
+  }
+}
+@media (max-width: 767px) {
+  .gym .container {
+    padding: 64px 0 277px;
+    text-align: left;
+    gap: 33px;
+  }
+}
+
+.gym__text-wrapper {
+  margin-top: 40px;
+}
+@media (max-width: 1199px) {
+  .gym__text-wrapper {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .gym__text-wrapper {
+    padding: 0 15px;
+  }
+}
+
+.gym__title {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-size: 48px;
+  line-height: normal;
+  letter-spacing: 1.44px;
+}
+@media (max-width: 1199px) {
+  .gym__title {
+    margin-bottom: 0;
+    font-size: 42px;
+    letter-spacing: 1.26px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__title {
+    margin-bottom: 5px;
+    font-size: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.gym__info {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 38px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+}
+@media (max-width: 1199px) {
+  .gym__info {
+    margin-bottom: 34px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__info {
+    margin-bottom: 23px;
+  }
+}
+
+.gym__text {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 300;
+}
+@media (max-width: 1199px) {
+  .gym__text {
+    margin-bottom: 0;
+    padding: 0 46px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__text {
+    padding: 0 35px 0 0;
+  }
+}
+.gym__text:last-of-type {
+  margin-bottom: 0;
+}
+@media (max-width: 1199px) {
+  .gym__text:last-of-type {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+  }
+}
+
+.gym__media-wrapper {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.gym__image-wrapper {
+  width: 660px;
+  height: 401px;
+  background-color: #cacaca;
+}
+@media (max-width: 1199px) {
+  .gym__image-wrapper {
+    width: 678px;
+    height: 345px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__image-wrapper {
+    width: auto;
+    height: 313px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__image-wrapper img {
+    width: 100vw;
+    height: 313px;
+  }
+}
+
+.gym__video-wrapper {
+  position: absolute;
+  bottom: -116px;
+  left: -63px;
+}
+@media (max-width: 1199px) {
+  .gym__video-wrapper {
+    bottom: -50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -54%);
+        -ms-transform: translate(-50%, -54%);
+            transform: translate(-50%, -54%);
+  }
+}
+@media (max-width: 767px) {
+  .gym__video-wrapper {
+    bottom: -95%;
+  }
+}
+
+.gym__video {
+  width: 364px;
+  height: 228px;
+  position: relative;
+  background-image: url("../../img/sprite/icon-video-play.svg"), url("../../img/gym-video-poster.jpg");
+  background-size: 100px, 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-color: #f8f9fc;
+}
+.gym__video:hover {
+  cursor: pointer;
+}
+.gym__video iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1199px) {
+  .gym__video {
+    width: 266px;
+    height: 167px;
+    background-size: 73px, 100%;
+  }
+}
+@media (max-width: 767px) {
+  .gym__video {
+    /* width: 320px; */
+    width: 100vw;
+    height: 167px;
+    background-image: url("../../img/sprite/icon-video-play.svg"), url("../../img/gym-video-poster-mobile.jpg");
   }
 }
 
