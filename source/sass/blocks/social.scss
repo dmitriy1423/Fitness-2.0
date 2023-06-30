@@ -12,16 +12,11 @@
 .social__link {
   display: block;
   padding: 6px;
-  background-color: white;
+  background-color: $color-default-white;
   border-radius: 50%;
 }
 
 .social__icon {
   display: block;
-  /* display: block;
-  width: 25px;
-  height: 25px; */
   fill: $color-background-footer;
-  /* fill: $color-background-footer; */
-  /* fill: white; */
 }

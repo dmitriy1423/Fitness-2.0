@@ -1,0 +1,51 @@
+.memberships {
+  background-color: $color-additional-background;
+  background-image: image-set("../../img/weight-plates-desktop@1x.png" 1x, "../../img/weight-plates-desktop@2x.png" 2x);
+  background-repeat: no-repeat;
+  background-position: right -183px bottom -150px;
+
+  .container {
+    padding: 120px 103px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      padding: 100px 163px;
+    }
+
+    @media (max-width: ($vp-768 - 1)) {
+      padding: 63px 15px 70px;
+    }
+  }
+
+  @media (max-width: ($vp-1200 - 1)) {
+    background-image: image-set("../../img/weight-plates-tablet@1x.png" 1x, "../../img/weight-plates-tablet@2x.png" 2x);
+    background-position: right -76px bottom -122px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    background-image: none;
+  }
+}
+
+.memberships__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 54px;
+  letter-spacing: 1.62px;
+  line-height: normal;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    padding-right: 13px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+    padding-right: 10px;
+    margin-bottom: 22px;
+  }
+}

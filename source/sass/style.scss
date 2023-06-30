@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/data-tabs";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -28,6 +29,9 @@
 @import "blocks/navigation";
 @import "blocks/hero";
 @import "blocks/gym";
+@import "blocks/memberships";
+@import "blocks/membership";
+@import "blocks/tabs";
 @import "blocks/footer";
 @import "blocks/social";
 

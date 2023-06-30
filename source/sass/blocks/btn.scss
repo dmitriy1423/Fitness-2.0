@@ -6,13 +6,49 @@
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 12px;
+  line-height: normal;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: $color-default-white;
   background-color: transparent;
-  border: 4px solid $color-button-border-light;
+  outline: 4px solid $color-button-border-light;
+  border: none;
   cursor: pointer;
   transition: opacity $trans-default;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    padding: 22px 30px;
+  }
+
+  &--memberships {
+    padding: 0 0 18px 0;
+    outline: none;
+    font-weight: 400;
+    font-size: 20px;
+    color: $color-default-black;
+    text-transform: none;
+    opacity: 0.5;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      padding: 0 0 18px 0;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: ($vp-768 - 1)) {
+      font-size: 16px;
+    }
+  }
+
+  &--membership {
+    padding: 25px 45px;
+    color: $color-default-black;
+    outline: 2px solid $color-button-border-dark;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      padding: 25px 44px;
+    }
+  }
 
   &:disabled {
     opacity: 0.5;
@@ -21,9 +57,5 @@
 
   @include hover-focus {
     opacity: 0.8;
-  }
-
-  @media (max-width: ($vp-1200 - 1)) {
-    padding: 18px 30px;
   }
 }

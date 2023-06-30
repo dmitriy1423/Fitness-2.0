@@ -1,0 +1,123 @@
+.membership {
+  padding: 7px;
+  font-family: $ff-roboto-condensed;
+  background-color: $color-default-background;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background: $color-button-background-gradient;
+
+    .membership__button {
+      color: $color-default-white;
+      background: $color-button-background-gradient;
+      outline: 2px solid transparent;
+    }
+  }
+
+  &--trener {
+    .membership__price::before {
+      content: "5000";
+    }
+  }
+
+  &--day {
+    .membership__price::before {
+      content: "1700";
+    }
+  }
+
+  &--full-day {
+    .membership__price::before {
+      content: "2700";
+    }
+  }
+}
+
+.membership__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  padding: 54px 69px 62px;
+  background-color: $color-default-background;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    padding: 54px 111px 63px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    padding: 44px 35px 48px;
+  }
+}
+
+.membership__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 110.16%;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    font-size: 22px;
+  }
+}
+
+.membership__info {
+  margin-bottom: 63px;
+
+  @media (max-width: ($vp-768 - 1)) {
+    margin-bottom: 53px;
+  }
+}
+
+.membership__price {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150%;
+  color: #103aae;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: -24px;
+    left: -12%;
+    font-size: 100px;
+    color: #e8e8e8;
+    opacity: 0.5;
+
+    @media (max-width: ($vp-768 - 1)) {
+      font-size: 80px;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 42px;
+    background-image: url("../../img/sprite/icon-rouble.svg");
+
+    @media (max-width: ($vp-768 - 1)) {
+      width: 24px;
+      height: 33px;
+      background-size: 24px 33px;
+    }
+  }
+
+  @media (max-width: ($vp-1200 - 1)) {
+    margin-bottom: 38px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    font-size: 48px;
+    gap: 10px;
+    margin-bottom: 31px;
+  }
+}
