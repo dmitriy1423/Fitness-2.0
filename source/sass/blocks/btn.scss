@@ -25,9 +25,92 @@
     outline: none;
     font-weight: 400;
     font-size: 20px;
-    color: $color-default-black;
+    color: rgba(16, 38, 84, 0.5);
     text-transform: none;
-    opacity: 0.5;
+    position: relative;
+
+    &:not(:first-child):not(:last-child) {
+      padding: 0 41px 18px;
+    }
+
+    &:not(:disabled)::before {
+      content: "";
+      z-index: 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(120, 120, 120, 0.2);
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-default-black;
+      cursor: pointer;
+
+      &:not(:first-child):not(:last-child) {
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          left: 25%;
+          bottom: 0;
+          width: 50%;
+          height: 2px;
+          background-color: #d10a42;
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #d10a42;
+        opacity: 1;
+      }
+    }
+
+    &.is-active {
+      color: $color-default-black;
+      pointer-events: none;
+
+      &:not(:first-child):not(:last-child) {
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          left: 25%;
+          bottom: 0;
+          width: 50%;
+          height: 2px;
+          background-color: #d10a42;
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #d10a42;
+        opacity: 1;
+      }
+    }
+
+    &:disabled {
+      color: $color-default-black;
+      opacity: 0.3;
+    }
 
     @media (max-width: ($vp-1200 - 1)) {
       padding: 0 0 18px 0;
@@ -37,6 +120,10 @@
 
     @media (max-width: ($vp-768 - 1)) {
       font-size: 16px;
+
+      &:not(:first-child):not(:last-child) {
+        padding: 0 38px 18px;
+      }
     }
   }
 
@@ -50,12 +137,48 @@
     }
   }
 
+  &--faq {
+    padding: 15px 85px;
+    font-weight: 500;
+    font-size: 18px;
+    color: $color-default-black;
+    text-transform: none;
+    outline: none;
+    border: 1px solid rgba(16, 38, 84, 0.2);
+
+    &:hover,
+    &:focus {
+      border: 1px solid $color-button-border-dark;
+    }
+
+    &.is-active {
+      color: $color-default-white;
+      background: $color-button-background-gradient;
+      outline: none;
+    }
+
+    &:disabled {
+      border: 1px solid rgba(16, 38, 84, 0.2);
+      color: #c8c9cc;
+    }
+
+    @media (max-width: ($vp-1200 - 1)) {
+      padding: 16px 57px;
+      width: 162px;
+    }
+
+    @media (max-width: ($vp-768 - 1)) {
+      padding: 12px 49px;
+      width: 141px;
+      font-size: 16px;
+    }
+  }
+
   &:disabled {
-    opacity: 0.5;
     pointer-events: none;
   }
 
-  @include hover-focus {
+  /* @include hover-focus {
     opacity: 0.8;
-  }
+  } */
 }

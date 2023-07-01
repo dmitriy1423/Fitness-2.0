@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import initVideo from './modules/video/video';
 import {initTabs} from './vendor/init-tabs';
+import {initAccordions} from './vendor/init-accordion';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
 
     initTabs();
+    initAccordions();
   });
 
   initVideo();
