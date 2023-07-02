@@ -800,6 +800,17 @@ button,
     font-size: 16px;
   }
 }
+.btn--banner {
+  padding: 25px 56px;
+}
+@media (max-width: 1199px) {
+  .btn--banner {
+    padding: 11px 52px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    outline: 2px solid #ffffff;
+  }
+}
 .btn:disabled {
   pointer-events: none;
 }
@@ -1794,13 +1805,12 @@ button,
 }
 
 .memberships {
+  position: relative;
+  overflow-x: clip;
   background-color: #f8f9fc;
-  background-image: -webkit-image-set(url("../../img/weight-plates-desktop@1x.png") 1x, url("../../img/weight-plates-desktop@2x.png") 2x);
-  background-image: image-set("../../img/weight-plates-desktop@1x.png" 1x, "../../img/weight-plates-desktop@2x.png" 2x);
-  background-repeat: no-repeat;
-  background-position: right -183px bottom -150px;
 }
 .memberships .container {
+  position: relative;
   padding: 120px 103px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1813,6 +1823,31 @@ button,
       -ms-flex-align: center;
           align-items: center;
 }
+.memberships .container::before {
+  position: absolute;
+  bottom: -139px;
+  right: -134px;
+  content: "";
+  width: 421px;
+  height: 484px;
+  background-image: -webkit-image-set(url("../../img/weight-plates-desktop@1x.png") 1x, url("../../img/weight-plates-desktop@2x.png") 2x);
+  background-image: image-set("../../img/weight-plates-desktop@1x.png" 1x, "../../img/weight-plates-desktop@2x.png" 2x);
+}
+@media (max-width: 1199px) {
+  .memberships .container::before {
+    width: 389px;
+    height: 380px;
+    bottom: -58px;
+    right: -42px;
+    background-image: -webkit-image-set(url("../../img/weight-plates-tablet@1x.png") 1x, url("../../img/weight-plates-tablet@2x.png") 2x);
+    background-image: image-set("../../img/weight-plates-tablet@1x.png" 1x, "../../img/weight-plates-tablet@2x.png" 2x);
+  }
+}
+@media (max-width: 767px) {
+  .memberships .container::before {
+    content: none;
+  }
+}
 @media (max-width: 1199px) {
   .memberships .container {
     padding: 100px 163px;
@@ -1821,18 +1856,6 @@ button,
 @media (max-width: 767px) {
   .memberships .container {
     padding: 63px 15px 70px;
-  }
-}
-@media (max-width: 1199px) {
-  .memberships {
-    background-image: -webkit-image-set(url("../../img/weight-plates-tablet@1x.png") 1x, url("../../img/weight-plates-tablet@2x.png") 2x);
-    background-image: image-set("../../img/weight-plates-tablet@1x.png" 1x, "../../img/weight-plates-tablet@2x.png" 2x);
-    background-position: right -76px bottom -122px;
-  }
-}
-@media (max-width: 767px) {
-  .memberships {
-    background-image: none;
   }
 }
 
@@ -1901,7 +1924,7 @@ button,
 }
 @media (max-width: 1199px) {
   .membership__wrapper {
-    padding: 54px 111px 63px;
+    padding: 54px 111px 61px;
   }
 }
 @media (max-width: 767px) {
@@ -1919,6 +1942,11 @@ button,
   line-height: 110.16%;
 }
 @media (max-width: 1199px) {
+  .membership__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
   .membership__title {
     font-size: 22px;
   }
@@ -2067,9 +2095,261 @@ button,
           justify-content: center;
   gap: 40px;
 }
+@media (max-width: 1199px) {
+  .tabs__list {
+    gap: 42px;
+  }
+}
 @media (max-width: 767px) {
   .tabs__list {
     gap: 35px;
+  }
+}
+
+.super-games {
+  color: #ffffff;
+  background-color: #ffffff;
+}
+.super-games .container {
+  padding: 120px 103px 106px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 1199px) {
+  .super-games .container {
+    padding: 100px 45px;
+  }
+}
+@media (max-width: 767px) {
+  .super-games .container {
+    padding: 70px 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.super-games__banner-wrapper {
+  padding: 80px 79px 87px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ed0233;
+}
+@media (max-width: 1199px) {
+  .super-games__banner-wrapper {
+    padding: 46px 45px;
+  }
+}
+@media (max-width: 767px) {
+  .super-games__banner-wrapper {
+    padding: 47px 44px 53px;
+  }
+}
+
+.super-games__banner-info {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 200px auto;
+  grid-template-columns: 200px auto;
+  gap: 50px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1199px) {
+  .super-games__banner-info {
+    margin-bottom: 2px;
+    -ms-grid-columns: 117px auto;
+    grid-template-columns: 117px auto;
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .super-games__banner-info {
+    margin-bottom: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.super-games__title {
+  margin-top: -20px;
+  margin-bottom: 0;
+  padding-left: 10px;
+  font-size: 82px;
+  line-height: 96%;
+  letter-spacing: 2.46px;
+  text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .super-games__title {
+    margin-top: -5px;
+    padding-left: 9px;
+    font-size: 48px;
+    letter-spacing: 1.44px;
+  }
+}
+
+.super-games__image-wrapper {
+  background-color: #102654;
+}
+.super-games__image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .super-games__image-wrapper {
+    height: 292px;
+  }
+}
+
+.super-games__banner-text {
+  margin-bottom: 48px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+}
+.super-games__banner-text p {
+  margin: 0;
+}
+@media (max-width: 1199px) {
+  .super-games__banner-text {
+    margin-bottom: 32px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .super-games__banner-text {
+    margin-bottom: 33px;
+  }
+}
+
+.super-games__date-and-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 19px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+@media (max-width: 1199px) {
+  .super-games__date-and-time {
+    gap: 7px;
+  }
+}
+
+.super-games__date-wrapper,
+.super-games__time-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.super-games__date-title,
+.super-games__time-title {
+  padding-bottom: 5px;
+  display: block;
+  width: 100%;
+  position: relative;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+}
+.super-games__date-title::before,
+.super-games__time-title::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+}
+@media (max-width: 1199px) {
+  .super-games__date-title,
+.super-games__time-title {
+    padding-bottom: 2px;
+    font-size: 12px;
+  }
+}
+
+.super-games__date-info {
+  margin-top: 5px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: -webkit-min-content auto;
+  -ms-grid-columns: min-content auto;
+  grid-template-columns: -webkit-min-content auto;
+  grid-template-columns: min-content auto;
+  -ms-grid-rows: (20px)[2];
+  grid-template-rows: repeat(2, 20px);
+  gap: 0 8px;
+}
+@media (max-width: 1199px) {
+  .super-games__date-info {
+    -ms-grid-rows: (11px)[2];
+    grid-template-rows: repeat(2, 11px);
+    margin-top: 4px;
+    gap: 0 3px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .super-games__time {
+    margin-top: -4px;
+  }
+}
+
+.super-games__date-day {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+
+.super-games__date-day,
+.super-games__time {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+}
+@media (max-width: 1199px) {
+  .super-games__date-day,
+.super-games__time {
+    font-size: 24px;
+  }
+}
+
+.super-games__date-month,
+.super-games__date-year {
+  font-size: 14px;
+  line-height: 150%;
+}
+@media (max-width: 1199px) {
+  .super-games__date-month,
+.super-games__date-year {
+    font-size: 10px;
   }
 }
 

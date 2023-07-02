@@ -60,6 +60,10 @@
   justify-content: center;
   gap: 40px;
 
+  @media (max-width: ($vp-1200 - 1)) {
+    gap: 42px;
+  }
+
   @media (max-width: ($vp-768 - 1)) {
     gap: 35px;
   }
