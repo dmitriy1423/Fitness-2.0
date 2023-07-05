@@ -44,6 +44,15 @@ function initSliders() {
       trainer.classList.add('trainer__info-wrapper--open');
     });
   });
+
+  const reviewsSlider = new Swiper('.reviews__items', {
+    direction: 'horizontal',
+    navigation: {
+      nextEl: '.reviews__slider-btn-next',
+      prevEl: '.reviews__slider-btn-prev',
+    },
+    grabCursor: true,
+  });
 }
 
 export default initSliders;

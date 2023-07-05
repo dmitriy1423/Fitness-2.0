@@ -612,3 +612,8 @@ button.swiper-pagination-bullet {
           backface-visibility: hidden;
   overflow: hidden;
 }
+
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}

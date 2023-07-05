@@ -8,11 +8,11 @@
     align-items: center;
 
     @media (max-width: ($vp-1200 - 1)) {
-      padding: 100px 55px;
+      padding: 91px 43px;
     }
 
     @media (max-width: ($vp-768 - 1)) {
-      padding: 70px 0;
+      padding: 63px 0 60px;
     }
   }
 }
