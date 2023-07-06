@@ -10,6 +10,7 @@
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/alumnisans-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/alumnisans-extrabold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/robotocondensed-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/robotocondensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/robotocondensed-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -1234,6 +1235,81 @@
             </div>
           </div>
         </section>
+        <div class="form-and-contacts-wrapper">
+          <section class="form">
+            <div class="container">
+              <h2 class="form__title">
+                Бесплатное занятие
+              </h2>
+              <div class="form__wrapper" data-form-validate data-callback="base">
+                <form method="post" action="https://echo.htmlacademy.ru/">
+                  <div class="form__field" data-on-input-validate data-required data-validate-type="text" data-limitation="letters" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля">
+                    <input type="text" aria-label="Имя" name="name" placeholder="Имя" required>
+                  </div>
+                  <div class="form__field" data-on-input-validate data-required data-validate-type="phone" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля">
+                    <input type="tel" aria-label="Телефон" name="telephone" placeholder="Телефон" required>
+                  </div>
+                  <button class="form__button btn btn--form" type="submit">
+                    Отправить
+                  </button>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section class="contacts">
+            <div class="container">
+              <h2 class="contacts__title">
+                Контакты
+              </h2>
+              <div class="contacts__info-wrapper">
+                <div class="contacts__info-inner-wrapper">
+                  <div class="contacts__info">
+                    <h3 class="contacts__info-title">
+                      Адрес:
+                    </h3>
+                    <div class="contacts__info-text">
+                      <address>
+                        г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7
+                      </address>
+                    </div>
+                  </div>
+                  <div class="contacts__info">
+                    <h3 class="contacts__info-title">
+                      График работы:
+                    </h3>
+                    <div class="contacts__info-text">
+                      <p>
+                        Пн-Вс: с&nbsp;8:00 до&nbsp;22:00
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__info-inner-wrapper">
+                  <div class="contacts__info">
+                    <h3 class="contacts__info-title">
+                      Телефон:
+                    </h3>
+                    <div class="contacts__info-text">
+                      <p>
+                        8-800-555-55-55
+                      </p>
+                    </div>
+                  </div>
+                  <div class="contacts__info">
+                    <h3 class="contacts__info-title">
+                      Email:
+                    </h3>
+                    <div class="contacts__info-text">
+                      <p>
+                        omsk@supergym.ru
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </main>
       <footer class="footer">
         <div class="container">

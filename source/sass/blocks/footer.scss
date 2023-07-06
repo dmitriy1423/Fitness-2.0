@@ -2,7 +2,7 @@
   background-color: $color-background-footer;
 
   .container {
-    padding: 44px 103px 32px;
+    padding: 40px 103px 36px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,7 +12,7 @@
     }
 
     @media (max-width: ($vp-768 - 1)) {
-      padding: 50px 15px 52px;
+      padding: 47px 15px 55px;
       flex-direction: column;
       gap: 31px;
     }
@@ -50,8 +50,16 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 40px;
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
+
+  @media (max-width: 1700px) {
+    max-width: 900px;
+  }
+
+  @media (max-width: 1500px) {
+    max-width: 800px;
+  }
 
   @media (max-width: ($vp-1200 - 1)) {
     gap: 30px;
@@ -62,7 +70,7 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
-    gap: 17px 87px;
+    gap: 16px 27px;
     align-self: flex-start;
     grid-auto-flow: column;
   }

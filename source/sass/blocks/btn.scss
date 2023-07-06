@@ -185,6 +185,13 @@
     }
   }
 
+  &--form {
+    padding: 17px;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    outline: 3px solid $color-button-border-light;
+  }
+
   &:disabled {
     pointer-events: none;
   }

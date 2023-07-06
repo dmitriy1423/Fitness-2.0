@@ -23,13 +23,17 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+  });
 
-    initTabs();
-    initAccordions();
-    initSliders();
+  const formWrapper = document.querySelector('.form__wrapper');
+  formWrapper.addEventListener('submit', () => {
+    window.form.validateForm(formWrapper);
   });
 
   initVideo();
+  initTabs();
+  initAccordions();
+  initSliders();
 });
 
 // ---------------------------------
