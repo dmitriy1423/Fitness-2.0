@@ -1221,42 +1221,42 @@ button.swiper-pagination-bullet {
   font-weight: 600;
   font-family: "Alumni Sans";
   font-display: swap;
-  src: url("../../fonts/alumnisans-semibold.woff2") format("woff2");
+  src: url("../fonts/alumnisans-semibold.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
   font-weight: 800;
   font-family: "Alumni Sans";
   font-display: swap;
-  src: url("../../fonts/alumnisans-extrabold.woff2") format("woff2");
+  src: url("../fonts/alumnisans-extrabold.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
   font-weight: 300;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/robotocondensed-light.woff2") format("woff2");
+  src: url("../fonts/robotocondensed-light.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
   font-weight: 400;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/robotocondensed-regular.woff2") format("woff2");
+  src: url("../fonts/robotocondensed-regular.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
   font-weight: 500;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/robotocondensed-medium.woff2") format("woff2");
+  src: url("../fonts/robotocondensed-medium.woff2") format("woff2");
 }
 @font-face {
   font-style: normal;
   font-weight: 700;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/robotocondensed-bold.woff2") format("woff2");
+  src: url("../fonts/robotocondensed-bold.woff2") format("woff2");
 }
 *,
 *::before,
@@ -5021,12 +5021,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-@media (max-width: 1199px) {
-  .contacts__info-wrapper {
-    /* display: grid;
-    grid-template-columns: repeat(2, auto); */
-  }
 }
 @media (max-width: 767px) {
   .contacts__info-wrapper {
