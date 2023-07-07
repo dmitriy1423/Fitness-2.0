@@ -1,11 +1,12 @@
 function initVideo() {
   const video = document.querySelector('.gym__video');
-  if (!video) {
+  const videoPlay = document.querySelector('.gym__video-play');
+  if (!(video || videoPlay)) {
     return;
   }
   const videoSrc = video.dataset.src;
 
-  video.addEventListener('click', () => {
+  videoPlay.addEventListener('click', () => {
     if (video.classList.contains('ready')) {
       return;
     }

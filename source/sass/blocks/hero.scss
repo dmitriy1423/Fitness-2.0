@@ -5,13 +5,13 @@
     gap: 28px;
     padding-bottom: 51px;
 
-    @media (max-width: ($vp-1200 - 1)) {
+    @include vp-1199 {
       padding-bottom: 82px;
       gap: 0;
       justify-content: space-between;
     }
 
-    @media (max-width: ($vp-768 - 1)) {
+    @include vp-767 {
       justify-content: center;
       padding-top: 75px;
       padding-bottom: 80px;
@@ -25,11 +25,11 @@
   grid-template-rows: repeat(3, auto);
   padding-top: 59px;
 
-  @media (max-width: ($vp-1200 - 1)) {
+  @include vp-1199 {
     padding-top: 35px;
   }
 
-  @media (max-width: ($vp-768 - 1)) {
+  @include vp-767 {
     margin-right: 0;
     padding-top: 0;
   }
@@ -45,12 +45,12 @@
     margin-top: 0;
   }
 
-  @media (max-width: ($vp-1200 - 1)) {
+  @include vp-1199 {
     width: 324px;
     height: 390px;
   }
 
-  @media (max-width: ($vp-768 - 1)) {
+  @include vp-767 {
     display: none;
   }
 }
@@ -59,7 +59,7 @@
   object-fit: cover;
   height: 100%;
 
-  @media (max-width: ($vp-768 - 1)) {
+  @include vp-767 {
     display: none;
   }
 }
@@ -75,11 +75,11 @@
   line-height: 150%;
   text-align: right;
 
-  @media (max-width: ($vp-1200 - 1)) {
+  @include vp-1199 {
     margin: 20px 0 0 0;
   }
 
-  @media (max-width: ($vp-768 - 1)) {
+  @include vp-767 {
     margin: 10px 0 0 0;
   }
 }
@@ -96,14 +96,14 @@
   text-align: right;
   text-transform: uppercase;
 
-  @media (max-width: ($vp-1200 - 1)) {
+  @include vp-1199 {
     padding-right: 15px;
     margin-bottom: 15px;
     font-size: 34px;
     letter-spacing: 1.02px;
   }
 
-  @media (max-width: ($vp-768 - 1)) {
+  @include vp-767 {
     font-size: 28px;
     margin-bottom: 20px;
   }
@@ -123,14 +123,14 @@
   text-align: right;
   text-transform: uppercase;
 
-  @media (max-width: ($vp-1200 - 1)) {
+  @include vp-1199 {
     margin-bottom: 60px;
     padding-right: 10px;
     font-size: 72px;
     max-width: 235px;
   }
 
-  @media (max-width: ($vp-768 - 1)) {
+  @include vp-767 {
     padding-right: 0;
     margin-bottom: 47px;
     max-width: 213px;
@@ -145,11 +145,11 @@
   justify-self: flex-end;
   margin-right: 34px;
 
-  @media (max-width: ($vp-1200 - 1)) {
+  @include vp-1199 {
     margin-right: 20px;
   }
 
-  @media (max-width: ($vp-768 - 1)) {
+  @include vp-767 {
     grid-column: 1 / -1;
     justify-self: stretch;
     margin-right: 0;

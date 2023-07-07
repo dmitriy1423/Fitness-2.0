@@ -14,6 +14,31 @@
   padding: 6px;
   background-color: $color-default-white;
   border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $color-additional-egyptian-blue;
+
+    .social__icon {
+      fill: $color-icon-light;
+    }
+  }
+
+  &:active {
+    background-color: $color-background-dark;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    outline: none;
+    pointer-events: none;
+    opacity: 0.3;
+    background-color: $color-default-white;
+
+    .social__icon {
+      fill: $color-background-footer;
+    }
+  }
 }
 
 .social__icon {

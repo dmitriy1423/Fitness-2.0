@@ -7,11 +7,11 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: ($vp-1200 - 1)) {
+    @include vp-1199 {
       padding: 47px 45px 44px;
     }
 
-    @media (max-width: ($vp-768 - 1)) {
+    @include vp-767 {
       padding: 47px 15px 55px;
       flex-direction: column;
       gap: 31px;
@@ -29,12 +29,12 @@
   width: 88px;
   height: 32px;
 
-  @media (max-width: ($vp-1200 - 1)) {
+  @include vp-1199 {
     width: 82px;
     height: 18px;
   }
 
-  @media (max-width: ($vp-768 - 1)) {
+  @include vp-767 {
     width: 68px;
     height: 15px;
     grid-column: 1 / 2;
@@ -61,12 +61,12 @@
     max-width: 800px;
   }
 
-  @media (max-width: ($vp-1200 - 1)) {
+  @include vp-1199 {
     gap: 30px;
     max-width: 533px;
   }
 
-  @media (max-width: ($vp-768 - 1)) {
+  @include vp-767 {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
@@ -77,15 +77,52 @@
 }
 
 .footer__link {
-  padding: 10px 0;
+  position: relative;
+  padding: 5px 0;
   font-family: $ff-roboto-condensed;
   font-size: 14px;
   line-height: normal;
   color: $color-default-white;
+
+  &:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-default-white;
+    }
+  }
+
+  &:focus {
+    &::before {
+      content: none;
+    }
+
+    outline: 1px solid $color-default-white;
+    outline-offset: 5px;
+  }
+
+  &:active {
+    &::before {
+      content: none;
+    }
+
+    outline: none;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    outline: none;
+    pointer-events: none;
+    opacity: 0.4;
+  }
 }
 
 .footer__social-list {
-  @media (max-width: ($vp-768 - 1)) {
+  @include vp-767 {
     align-self: flex-start;
   }
 }
