@@ -614,6 +614,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-button-disabled {
+  outline: none;
   opacity: 0.3;
   pointer-events: none;
 }

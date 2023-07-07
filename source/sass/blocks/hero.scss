@@ -1,7 +1,6 @@
 .hero {
   .container {
     display: flex;
-    align-items: center;
     gap: 28px;
     padding-bottom: 51px;
 
@@ -14,19 +13,20 @@
     @include vp-767 {
       justify-content: center;
       padding-top: 75px;
-      padding-bottom: 80px;
+      padding-bottom: 77px;
     }
   }
 }
 
 .hero__inner-wrapper {
+  max-width: 500px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
-  padding-top: 59px;
+  padding-top: 96px;
 
   @include vp-1199 {
-    padding-top: 35px;
+    padding-top: 52px;
   }
 
   @include vp-767 {
@@ -46,6 +46,7 @@
   }
 
   @include vp-1199 {
+    margin-top: -4px;
     width: 324px;
     height: 390px;
   }
@@ -65,7 +66,7 @@
 }
 
 .hero__description {
-  margin: 30px 0 0 19px;
+  margin: 10px 0 0 19px;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   align-self: center;
@@ -76,18 +77,13 @@
   text-align: right;
 
   @include vp-1199 {
-    margin: 20px 0 0 0;
-  }
-
-  @include vp-767 {
-    margin: 10px 0 0 0;
+    margin: 0;
   }
 }
 
 .hero__city {
   grid-column: 2 / -1;
   grid-row: 1 / 2;
-  margin-bottom: 25px;
   padding-right: 80px;
   font-weight: 600;
   font-size: 48px;
@@ -97,15 +93,16 @@
   text-transform: uppercase;
 
   @include vp-1199 {
-    padding-right: 15px;
+    padding-right: 23px;
     margin-bottom: 15px;
     font-size: 34px;
     letter-spacing: 1.02px;
   }
 
   @include vp-767 {
+    padding-right: 9px;
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 38px;
   }
 }
 
@@ -113,33 +110,35 @@
   padding-right: 38px;
   grid-column: 2 / -1;
   grid-row: 2 / 3;
-  margin: 0;
-  margin-bottom: 80px;
+  margin-top: -30px;
+  margin-bottom: 0;
   max-width: 300px;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 92px;
-  line-height: 100%;
+  line-height: 118%;
   letter-spacing: 4.6px;
   text-align: right;
   text-transform: uppercase;
 
   @include vp-1199 {
-    margin-bottom: 60px;
-    padding-right: 10px;
+    /* margin-bottom: 60px; */
+    padding-right: 17px;
     font-size: 72px;
+    letter-spacing: 3.6px;
     max-width: 235px;
   }
 
   @include vp-767 {
+    line-height: 127%;
     padding-right: 0;
-    margin-bottom: 47px;
+    margin-bottom: 17px;
     max-width: 213px;
-    letter-spacing: 3.6px;
   }
 }
 
 
 .hero__button {
+  height: fit-content;
   grid-column: 2 / -1;
   grid-row: 3 / -1;
   justify-self: flex-end;

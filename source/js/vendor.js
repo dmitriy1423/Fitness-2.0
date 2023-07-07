@@ -1,5 +1,4 @@
 // Swiper 7.4.1
-import './vendor/focus-visible-polyfill';
 import swiper from './vendor/swiper';
 
 function initSliders() {
@@ -8,7 +7,7 @@ function initSliders() {
   const trainersSlider = new Swiper('.trainers__items', {
     direction: 'horizontal',
     slidesPerView: 4,
-    spaceBetween: 35,
+    spaceBetween: 40,
     loop: true,
     navigation: {
       nextEl: '.trainers__slider-btn-next',
@@ -34,16 +33,17 @@ function initSliders() {
   });
 
   const trainers = document.querySelectorAll('.trainer');
-
-  trainers.forEach((trainer) => {
-    trainer.addEventListener('click', () => {
-      if (trainer.classList.contains('trainer__info-wrapper--open')) {
-        trainer.classList.remove('trainer__info-wrapper--open');
-        return;
-      }
-      trainer.classList.add('trainer__info-wrapper--open');
+  if (trainers) {
+    trainers.forEach((trainer) => {
+      trainer.addEventListener('click', () => {
+        if (trainer.classList.contains('trainer__info-wrapper--open')) {
+          trainer.classList.remove('trainer__info-wrapper--open');
+          return;
+        }
+        trainer.classList.add('trainer__info-wrapper--open');
+      });
     });
-  });
+  }
 
   const reviewsSlider = new Swiper('.reviews__items', {
     direction: 'horizontal',

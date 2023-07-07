@@ -44,6 +44,7 @@
 
   @include vp-1199 {
     margin-bottom: 0;
+    padding-right: 16px;
     font-size: 42px;
     letter-spacing: 1.26px;
   }
@@ -148,7 +149,7 @@
   width: 364px;
   height: 228px;
   position: relative;
-  background-image: url("../../img/gym-video-poster.jpg");
+  background-image: image-set("../../img/gym-video-poster.webp", "../../img/gym-video-poster.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -179,7 +180,7 @@
   @include vp-767 {
     width: 100vw;
     height: 167px;
-    background-image: url("../../img/gym-video-poster-mobile.jpg");
+    background-image: image-set("../../img/gym-video-poster-mobile.webp", "../../img/gym-video-poster-mobile.jpg");
   }
 }
 

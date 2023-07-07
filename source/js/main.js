@@ -26,9 +26,11 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   const formWrapper = document.querySelector('.form__wrapper');
-  formWrapper.addEventListener('submit', () => {
-    window.form.validateForm(formWrapper);
-  });
+  if (formWrapper) {
+    formWrapper.addEventListener('submit', () => {
+      window.form.validateForm(formWrapper);
+    });
+  }
 
   initVideo();
   initTabs();

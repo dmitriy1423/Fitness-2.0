@@ -64,14 +64,14 @@
   z-index: 10;
   top: 41%;
 
-  @include vp-767 {
+  @include vp-1199 {
     top: 43%;
   }
 }
 
 .trainers__slider-btn-next {
   transform: rotate(180deg);
-  right: -79px;
+  right: -69px;
 
   @include vp-767 {
     right: -45px;
@@ -79,7 +79,7 @@
 }
 
 .trainers__slider-btn-prev {
-  left: -79px;
+  left: -69px;
 
   @include vp-767 {
     left: -45px;

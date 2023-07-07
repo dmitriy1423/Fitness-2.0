@@ -1,9 +1,9 @@
 .memberships {
   position: relative;
-  overflow-x: clip;
   background-color: $color-additional-background;
 
   .container {
+    overflow: clip visible;
     position: relative;
     padding: 120px 103px;
     display: flex;
@@ -17,14 +17,14 @@
       content: "";
       width: 421px;
       height: 484px;
-      background-image: image-set("../../img/weight-plates-desktop@1x.png" 1x, "../../img/weight-plates-desktop@2x.png" 2x);
+      background-image: image-set("../../img/weight-plates-desktop@1x.webp" 1x, "../../img/weight-plates-desktop@1x.png" 1x, "../../img/weight-plates-desktop@2x.webp" 2x, "../../img/weight-plates-desktop@2x.png" 2x);
 
       @include vp-1199 {
         width: 389px;
         height: 380px;
         bottom: -58px;
         right: -42px;
-        background-image: image-set("../../img/weight-plates-tablet@1x.png" 1x, "../../img/weight-plates-tablet@2x.png" 2x);
+        background-image: image-set("../../img/weight-plates-tablet@1x.webp" 1x, "../../img/weight-plates-tablet@1x.png" 1x, "../../img/weight-plates-tablet@2x.webp" 2x, "../../img/weight-plates-tablet@2x.png" 2x);
       }
 
       @include vp-767 {
