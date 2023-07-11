@@ -93,6 +93,7 @@
 }
 
 .sales__banner-time-interval {
+  margin-top: 0;
   margin-bottom: -26px;
   font-weight: 700;
   font-size: 28px;
@@ -111,12 +112,9 @@
 }
 
 .sales__banner-text {
+  margin-top: 0;
   margin-bottom: 190px;
   font-size: 18px;
-
-  p {
-    margin: 0;
-  }
 
   @include vp-767 {
     text-align: center;

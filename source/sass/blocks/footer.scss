@@ -12,9 +12,10 @@
     }
 
     @include vp-767 {
+      display: block;
       padding: 47px 15px 55px;
-      flex-direction: column;
-      gap: 31px;
+      columns: 2 120px;
+      gap: 30px;
     }
   }
 }
@@ -22,6 +23,11 @@
 .footer__item {
   &--logo {
     margin-right: auto;
+  }
+
+  @include vp-767 {
+    width: fit-content;
+    margin-bottom: 20px;
   }
 }
 
@@ -37,8 +43,7 @@
   @include vp-767 {
     width: 68px;
     height: 15px;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    margin-bottom: 30px;
   }
 }
 
@@ -48,6 +53,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 40px;
   max-width: 1000px;
@@ -67,12 +73,8 @@
   }
 
   @include vp-767 {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, auto);
-    gap: 16px 28px;
-    align-self: flex-start;
-    grid-auto-flow: column;
+    display: block;
+    width: 200px;
   }
 }
 
@@ -123,6 +125,6 @@
 
 .footer__social-list {
   @include vp-767 {
-    align-self: flex-start;
+    column-span: all;
   }
 }

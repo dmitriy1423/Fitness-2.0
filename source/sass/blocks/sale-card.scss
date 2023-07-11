@@ -44,12 +44,9 @@
 }
 
 .sale-card__text {
+  margin-top: 0;
   margin-bottom: 65px;
   line-height: 140%;
-
-  p {
-    margin: 0;
-  }
 
   @include vp-1199 {
     margin-bottom: 45px;

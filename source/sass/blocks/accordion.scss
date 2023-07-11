@@ -4,11 +4,6 @@
   border-top: 1px solid rgba(28, 51, 116, 0.2);
   border-bottom: 1px solid rgba(28, 51, 116, 0.2);
 
-  & & {
-    width: 90%;
-    margin: 0 auto;
-  }
-
   &__element:last-child {
     margin-bottom: 0;
     padding-bottom: 13px;
@@ -28,9 +23,20 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    transition: all 0.3s ease;
 
-    &.is-active {
+    &[open] {
       padding: 25px 0;
+
+      .accordion__icon-open {
+        display: none;
+      }
+
+      .accordion__icon-close {
+        display: block;
+        stroke: $color-icon-light;
+        fill: $color-icon-dark;
+      }
     }
 
     &:not(:last-child) {
@@ -49,18 +55,6 @@
       &.is-active {
         padding: 20px 0;
       }
-    }
-  }
-
-  &__element.is-active &__button {
-    .accordion__icon-open {
-      display: none;
-    }
-
-    .accordion__icon-close {
-      display: block;
-      stroke: $color-icon-light;
-      fill: $color-icon-dark;
     }
   }
 
@@ -134,20 +128,17 @@
 
   &__wrapper {
     padding: 0;
+    margin: 0;
+    margin-bottom: -2px;
+    padding-right: 23%;
+    font-family: $ff-roboto-condensed;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 140%;
 
-    p {
-      margin: 0;
-      margin-bottom: -2px;
-      padding-right: 23%;
-      font-family: $ff-roboto-condensed;
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 140%;
-
-      @include vp-767 {
-        padding-right: 0;
-        font-size: 16px;
-      }
+    @include vp-767 {
+      padding-right: 0;
+      font-size: 16px;
     }
   }
 }

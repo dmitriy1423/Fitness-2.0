@@ -109,6 +109,7 @@
 }
 
 .contacts__info {
+  margin: 0;
   font-family: $ff-roboto-condensed;
   width: fit-content;
   display: flex;
@@ -123,6 +124,7 @@
 .contacts__info-title {
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: 700;
   font-size: 16px;
   line-height: 150%;
 
@@ -132,17 +134,9 @@
 }
 
 .contacts__info-text {
+  margin: 0;
   font-size: 14px;
   line-height: 152%;
-
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  address {
-    font-style: normal;
-  }
 
   @include vp-1199 {
     font-size: 18px;
