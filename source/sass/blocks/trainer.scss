@@ -78,6 +78,25 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  span {
+    margin-top: -5px;
+    margin-bottom: 33px;
+    font-size: 16px;
+    color: #b6bdcc;
+
+    @include vp-767 {
+      margin-bottom: 34px;
+    }
+  }
 }
 
 .trainer__info-wrapper--open {
@@ -147,25 +166,6 @@
         color: $color-default-white;
       }
     }
-  }
-}
-
-.trainer__title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 18px;
-  line-height: 150%;
-  text-align: center;
-}
-
-.trainer__category {
-  margin-top: -5px;
-  margin-bottom: 33px;
-  font-size: 16px;
-  color: #b6bdcc;
-
-  @include vp-767 {
-    margin-bottom: 34px;
   }
 }
 

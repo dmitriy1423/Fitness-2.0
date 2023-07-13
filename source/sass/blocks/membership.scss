@@ -28,29 +28,29 @@
   padding: 54px 69px 62px;
   background-color: $color-default-background;
 
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: $ff-roboto-condensed;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 110.16%;
+
+    @include vp-1199 {
+      font-size: 26px;
+    }
+
+    @include vp-767 {
+      font-size: 22px;
+    }
+  }
+
   @include vp-1199 {
     padding: 54px 111px 61px;
   }
 
   @include vp-767 {
     padding: 44px 35px 48px;
-  }
-}
-
-.membership__title {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-family: $ff-roboto-condensed;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 110.16%;
-
-  @include vp-1199 {
-    font-size: 26px;
-  }
-
-  @include vp-767 {
-    font-size: 22px;
   }
 }
 
@@ -74,16 +74,40 @@
   line-height: 150%;
   color: #103aae;
 
-  &::after {
-    content: "";
-    width: 30px;
-    height: 42px;
-    background-image: url("../img/sprite/icon-rouble.svg");
+  span:first-of-type {
+    position: absolute;
+    top: -25%;
+    left: -12%;
+    z-index: -1;
+    font-size: 100px;
+    color: #e8e8e8;
+    opacity: 0.5;
 
     @include vp-767 {
-      width: 24px;
-      height: 33px;
-      background-size: 24px 33px;
+      font-size: 80px;
+    }
+  }
+
+  span:last-of-type {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &::after {
+      content: "";
+      width: 30px;
+      height: 42px;
+      background-image: url("../img/sprite/icon-rouble.svg");
+
+      @include vp-767 {
+        width: 24px;
+        height: 33px;
+        background-size: 24px 33px;
+      }
+    }
+
+    @include vp-767 {
+      gap: 10px;
     }
   }
 
@@ -95,19 +119,5 @@
     font-size: 48px;
     gap: 10px;
     margin-bottom: 31px;
-  }
-}
-
-.membership__price-double {
-  position: absolute;
-  top: -25%;
-  left: -12%;
-  z-index: -1;
-  font-size: 100px;
-  color: #e8e8e8;
-  opacity: 0.5;
-
-  @include vp-767 {
-    font-size: 80px;
   }
 }

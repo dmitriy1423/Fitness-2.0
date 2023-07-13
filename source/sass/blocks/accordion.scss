@@ -4,6 +4,50 @@
   border-top: 1px solid rgba(28, 51, 116, 0.2);
   border-bottom: 1px solid rgba(28, 51, 116, 0.2);
 
+  &__icon {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: $color-icon-light;
+    border: 1px solid $color-icon-dark;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 1px;
+      background-color: $color-icon-dark;
+
+      @include vp-767 {
+        width: 12px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      width: 20px;
+      height: 1px;
+      background-color: $color-icon-dark;
+
+      @include vp-767 {
+        width: 12px;
+      }
+    }
+
+    @include vp-767 {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
   &__element:last-child {
     margin-bottom: 0;
     padding-bottom: 24px;
@@ -21,17 +65,39 @@
     gap: 10px;
     transition: all 0.3s ease;
 
+    p {
+      padding: 10px 23% 0 0;
+      margin-top: 0;
+      margin-bottom: -2px;
+      font-family: $ff-roboto-condensed;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 140%;
+
+      @include vp-1199 {
+        padding: 8px 23% 0 0;
+      }
+
+      @include vp-767 {
+        padding: 12px 0 0 0;
+        font-size: 16px;
+      }
+    }
+
     &[open] {
       padding: 25px 0;
 
-      .accordion__icon-open {
-        display: none;
-      }
+      .accordion__icon {
+        background-color: $color-icon-dark;
+        border: 1px solid $color-icon-light;
 
-      .accordion__icon-close {
-        display: block;
-        stroke: $color-icon-light;
-        fill: $color-icon-dark;
+        &::before {
+          background-color: $color-icon-light;
+        }
+
+        &::after {
+          content: none;
+        }
       }
     }
 
@@ -71,46 +137,37 @@
     outline: none;
     cursor: pointer;
 
-    .accordion__icon-open {
-      display: block;
-      fill: $color-icon-light;
-      stroke: $color-icon-dark;
-
-      @include vp-767 {
-        width: 32px;
-        height: 32px;
-      }
-    }
-
-    .accordion__icon-close {
-      display: none;
-
-      @include vp-767 {
-        width: 32px;
-        height: 32px;
-      }
-    }
-
     &:hover,
     &:focus {
-      .accordion__icon-open {
-        stroke: $color-icon-light;
-        fill: $color-icon-dark;
+      .accordion__icon {
+        background-color: $color-icon-dark;
+        border: 1px solid $color-icon-light;
+
+        &::before {
+          background-color: $color-icon-light;
+        }
+
+        &::after {
+          background-color: $color-icon-light;
+        }
       }
     }
 
     &:disabled {
-      cursor: auto;
+      pointer-events: none;
 
-      .accordion__icon-close {
-        display: none;
-      }
+      .accordion__icon {
+        opacity: 0.3;
+        background-color: $color-icon-light;
+        border: 1px solid $color-icon-dark;
 
-      .accordion__icon-open {
-        display: block;
-        fill: $color-icon-light;
-        stroke: $color-icon-dark;
-        opacity: 0.5;
+        &::before {
+          background-color: $color-icon-dark;
+        }
+
+        &::after {
+          background-color: $color-icon-dark;
+        }
       }
     }
 
@@ -121,35 +178,4 @@
       gap: 20px;
     }
   }
-
-  &__wrapper {
-    padding: 10px 23% 0 0;
-    margin: 0;
-    margin-bottom: -2px;
-    font-family: $ff-roboto-condensed;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 140%;
-
-    @include vp-1199 {
-      padding: 8px 23% 0 0;
-    }
-
-    @include vp-767 {
-      padding: 12px 0 0 0;
-      font-size: 16px;
-    }
-  }
-}
-
-.accordion__title {
-  margin: 0;
-  font-size: 24px;
-  line-height: 120%;
-}
-
-.accordion__inner-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
