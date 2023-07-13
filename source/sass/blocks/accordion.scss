@@ -6,20 +6,16 @@
 
   &__element:last-child {
     margin-bottom: 0;
-    padding-bottom: 13px;
-
-    @include vp-1199 {
-      padding-bottom: 15px;
-    }
+    padding-bottom: 24px;
 
     @include vp-767 {
-      padding-bottom: 7px;
+      padding-bottom: 20px;
     }
   }
 
   &__element {
     margin-bottom: 0;
-    padding: 25px 0 14px;
+    padding: 25px 0 24px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -44,15 +40,15 @@
     }
 
     @include vp-1199 {
-      padding: 25px 0 16px;
+      padding: 25px 0 24px;
       gap: 8px;
     }
 
     @include vp-767 {
-      padding: 20px 0 8px;
+      padding: 20px 0;
       gap: 12px;
 
-      &.is-active {
+      &[open] {
         padding: 20px 0;
       }
     }
@@ -127,17 +123,20 @@
   }
 
   &__wrapper {
-    padding: 0;
+    padding: 10px 23% 0 0;
     margin: 0;
     margin-bottom: -2px;
-    padding-right: 23%;
     font-family: $ff-roboto-condensed;
     font-weight: 300;
     font-size: 18px;
     line-height: 140%;
 
+    @include vp-1199 {
+      padding: 8px 23% 0 0;
+    }
+
     @include vp-767 {
-      padding-right: 0;
+      padding: 12px 0 0 0;
       font-size: 16px;
     }
   }

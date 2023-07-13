@@ -74,30 +74,38 @@
 }
 
 .gym__text {
-  margin-top: 0;
-  margin-bottom: 9px;
+  /* margin-top: 0;
+  margin-bottom: 9px; */
   font-family: $ff-roboto-condensed;
   font-weight: 300;
 
+  p {
+    margin-top: 0;
+    margin-bottom: 9px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+
+      @include vp-1199 {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        z-index: -1;
+      }
+    }
+
+    @include vp-1199 {
+      margin-bottom: 0;
+    }
+  }
+
   @include vp-1199 {
-    margin-bottom: 0;
     padding: 0 46px;
   }
 
   @include vp-767 {
     padding: 0 35px 0 0;
-  }
-
-  &:last-of-type {
-    margin-bottom: 0;
-
-    @include vp-1199 {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-      z-index: -1;
-    }
   }
 }
 

@@ -18,24 +18,6 @@
       }
     }
   }
-
-  &--trener {
-    .membership__price::before {
-      content: "5000";
-    }
-  }
-
-  &--day {
-    .membership__price::before {
-      content: "1700";
-    }
-  }
-
-  &--full-day {
-    .membership__price::before {
-      content: "2700";
-    }
-  }
 }
 
 .membership__wrapper {
@@ -92,20 +74,6 @@
   line-height: 150%;
   color: #103aae;
 
-  &::before {
-    position: absolute;
-    z-index: -1;
-    top: -24px;
-    left: -12%;
-    font-size: 100px;
-    color: #e8e8e8;
-    opacity: 0.5;
-
-    @include vp-767 {
-      font-size: 80px;
-    }
-  }
-
   &::after {
     content: "";
     width: 30px;
@@ -127,5 +95,19 @@
     font-size: 48px;
     gap: 10px;
     margin-bottom: 31px;
+  }
+}
+
+.membership__price-double {
+  position: absolute;
+  top: -25%;
+  left: -12%;
+  z-index: -1;
+  font-size: 100px;
+  color: #e8e8e8;
+  opacity: 0.5;
+
+  @include vp-767 {
+    font-size: 80px;
   }
 }

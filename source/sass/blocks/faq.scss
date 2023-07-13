@@ -2,7 +2,7 @@
   background-color: $color-additional-background;
 
   .container {
-    padding: 120px 103px;
+    padding: 120px 103px 118px;
 
     @include vp-1199 {
       padding: 100px 45px;

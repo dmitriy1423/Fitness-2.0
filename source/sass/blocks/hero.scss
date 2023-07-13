@@ -124,6 +124,7 @@
 
   @include vp-1199 {
     padding-right: 17px;
+    margin-bottom: 14px;
     font-size: 72px;
     letter-spacing: 3.6px;
     max-width: 235px;
@@ -146,7 +147,7 @@
   margin-right: 34px;
 
   @include vp-1199 {
-    margin-right: 20px;
+    margin-right: 24px;
   }
 
   @include vp-767 {

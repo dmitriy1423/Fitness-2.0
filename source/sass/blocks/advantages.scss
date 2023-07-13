@@ -46,8 +46,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: 340px 240px 340px;
-  grid-template-rows: repeat(2, auto);
-  gap: 0 60px;
+  gap: 80px 60px;
   font-family: $ff-roboto-condensed;
 
   @include vp-1199 {
@@ -57,9 +56,8 @@
   }
 
   @include vp-767 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    justify-content: center;
   }
 }
 
@@ -70,10 +68,11 @@
   gap: 30px;
   width: 100%;
   margin-top: -3px;
-  margin-bottom: 4px;
+  padding-bottom: 75px;
 
   @include vp-1199 {
     margin: 0;
+    padding: 0;
     width: fit-content;
     justify-self: center;
     align-items: center;
@@ -87,31 +86,43 @@
     width: 100%;
   }
 
-  &:not(:nth-last-child(-n + 2))::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(209, 10, 66, 0.2);
+  &:not(:nth-last-child(-n + 2)):not(:first-child) {
+    border-bottom: 1px solid rgba(209, 10, 66, 0.2);
 
     @include vp-1199 {
-      content: none;
+      border: none;
     }
   }
 
-  &:nth-child(2n) {
+  &:nth-child(even) {
+    grid-column: 1 / 2;
     padding-left: 20px;
 
     @include vp-1199 {
       padding-left: 0;
+    }
+
+    @include vp-767 {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &:nth-child(odd):not(:first-child) {
+    grid-column: 3 / -1;
+
+    @include vp-1199 {
+      grid-column: 2 / -1;
+    }
+
+    @include vp-767 {
+      grid-column: 1 / -1;
     }
   }
 
   &:nth-last-child(-n + 2) {
     align-self: flex-end;
     margin-bottom: -7px;
+    padding-bottom: 0;
 
     @include vp-1199 {
       margin-bottom: 0;
@@ -126,7 +137,7 @@
     height: 100%;
     position: relative;
     grid-column: 2 / 3;
-    grid-row: 1 / -1;
+    grid-row: 1 / span 2;
     padding: 61px 20px 58px;
     margin: 0;
     flex-direction: column;
@@ -173,11 +184,12 @@
       padding: 40px 105px 37px;
       margin-bottom: 4px;
       width: fit-content;
-      justify-self: center;
+      height: auto;
       gap: 15px;
     }
 
     @include vp-767 {
+      grid-row: 3 / 4;
       width: 100%;
       margin-bottom: 12px;
       padding: 45px 74px 43px;
