@@ -2,7 +2,7 @@
   background-color: $color-default-background;
 
   .container {
-    padding: 0 105px 94px;
+    padding: 0 105px 105px;
 
     @include vp-1199 {
       padding: 0 101px 100px;
@@ -23,7 +23,7 @@
 
 .trainers__title {
   margin-top: 0;
-  margin-bottom: 47px;
+  margin-bottom: 49px;
   font-weight: 600;
   font-size: 54px;
   line-height: normal;

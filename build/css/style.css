@@ -1530,7 +1530,7 @@ button,
   }
 }
 .btn--memberships {
-  padding: 0 0 16px 0;
+  padding: 0 0 14px 0;
   outline: none;
   border: none;
   font-weight: 400;
@@ -1579,6 +1579,7 @@ button,
 @media (max-width: 767px) {
   .btn--memberships {
     font-size: 16px;
+    padding: 0 0 16px;
   }
 }
 .btn--membership {
@@ -1795,10 +1796,12 @@ button,
   display: -ms-flexbox;
   display: flex;
   gap: 28px;
+  margin-top: -23px;
   padding-bottom: 51px;
 }
 @media (max-width: 1199px) {
   .hero .container {
+    padding-top: 19px;
     padding-bottom: 82px;
     gap: 0;
     -webkit-box-pack: justify;
@@ -1808,6 +1811,7 @@ button,
 }
 @media (max-width: 767px) {
   .hero .container {
+    margin-top: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1824,7 +1828,7 @@ button,
   grid-template-columns: repeat(2, auto);
   -ms-grid-rows: (auto)[3];
   grid-template-rows: repeat(3, auto);
-  padding-top: 96px;
+  padding-top: 119px;
 }
 .hero__inner-wrapper span {
   grid-column: 2/-1;
@@ -1889,7 +1893,7 @@ button,
 }
 @media (max-width: 1199px) {
   .hero__inner-wrapper {
-    padding-top: 52px;
+    padding-top: 55px;
   }
 }
 @media (max-width: 767px) {
@@ -1902,7 +1906,6 @@ button,
 .hero__image-wrapper {
   width: 500px;
   height: 556px;
-  margin-top: -24px;
   background-color: #332254;
 }
 @media (max-width: 1360px) {
@@ -1912,7 +1915,6 @@ button,
 }
 @media (max-width: 1199px) {
   .hero__image-wrapper {
-    margin-top: -4px;
     width: 324px;
     height: 390px;
   }
@@ -1955,6 +1957,11 @@ button,
 @media (max-width: 1199px) {
   .hero__description {
     margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .hero__description {
+    margin-right: -15px;
   }
 }
 
@@ -2027,7 +2034,6 @@ button,
 @media (max-width: 1199px) {
   .gym__text-wrapper h2 {
     margin-bottom: 0;
-    padding-right: 16px;
     font-size: 42px;
     letter-spacing: 1.26px;
   }
@@ -2297,14 +2303,13 @@ button,
   .memberships h2 {
     font-size: 42px;
     letter-spacing: 1.26px;
-    padding-right: 13px;
+    margin-bottom: 22px;
   }
 }
 @media (max-width: 767px) {
   .memberships h2 {
     font-size: 32px;
     letter-spacing: 0.96px;
-    padding-right: 10px;
     margin-bottom: 22px;
   }
 }
@@ -2476,6 +2481,7 @@ button,
 }
 @media (max-width: 1199px) {
   .tabs__controls {
+    gap: 48px;
     margin-bottom: 45px;
   }
 }
@@ -2599,23 +2605,7 @@ button,
   -ms-grid-columns: 200px auto;
   grid-template-columns: 200px auto;
   gap: 50px;
-  margin-bottom: 6px;
-  /* p {
-    margin-top: 0;
-    margin-bottom: 45px;
-    font-family: $ff-roboto-condensed;
-    font-size: 18px;
-    line-height: 150%;
-
-    @include vp-1199 {
-      margin-bottom: 30px;
-      font-size: 12px;
-    }
-
-    @include vp-767 {
-      margin-bottom: 31px;
-    }
-  } */
+  margin-bottom: 10px;
 }
 .super-games__banner-info h2 {
   margin-top: -20px;
@@ -2640,9 +2630,6 @@ button,
   width: -moz-min-content;
   width: min-content;
   margin: 0;
-  /* display: flex;
-  flex-direction: column;
-  gap: 19px; */
   font-family: "Roboto Condensed", "Arial", sans-serif;
 }
 @media (max-width: 1199px) {
@@ -2658,15 +2645,6 @@ button,
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 18px;
   line-height: 150%;
-  /* &::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: $color-default-white;
-  } */
 }
 @media (max-width: 1199px) {
   .super-games__banner-info dt {
@@ -2674,21 +2652,24 @@ button,
     font-size: 12px;
   }
 }
+@media (max-width: 767px) {
+  .super-games__banner-info dt {
+    padding-bottom: 1px;
+  }
+}
 .super-games__banner-info dd {
-  /* width: fit-content; */
   position: relative;
   margin-left: 0;
-  margin-top: -2px;
+  margin-top: -5px;
   font-weight: 700;
   font-size: 40px;
   line-height: 150%;
-  /* border-top: 1px solid $color-default-white; */
 }
 .super-games__banner-info dd::before {
   position: absolute;
   content: "";
   left: 0;
-  top: 0;
+  top: 5px;
   width: 100%;
   height: 1px;
   background-color: #ffffff;
@@ -2697,7 +2678,7 @@ button,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-top: -1px;
+  margin-top: -5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2712,11 +2693,11 @@ button,
   }
 }
 .super-games__banner-info dd:not(:last-of-type) {
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 @media (max-width: 1199px) {
   .super-games__banner-info dd:not(:last-of-type) {
-    margin-bottom: -2px;
+    margin-bottom: 2px;
   }
 }
 @media (max-width: 1199px) {
@@ -2739,7 +2720,7 @@ button,
 }
 @media (max-width: 1199px) {
   .super-games__banner-info {
-    margin-bottom: 0;
+    margin-bottom: 3px;
     -ms-grid-columns: 117px auto;
     grid-template-columns: 117px auto;
     gap: 30px;
@@ -2747,30 +2728,12 @@ button,
 }
 @media (max-width: 767px) {
   .super-games__banner-info {
-    margin-bottom: 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
 }
 
-/* .super-games__title {
-  margin-top: -20px;
-  margin-bottom: 0;
-  padding-left: 10px;
-  font-weight: 600;
-  font-size: 82px;
-  line-height: 96%;
-  letter-spacing: 2.46px;
-  text-transform: uppercase;
-
-  @include vp-1199 {
-    margin-top: -5px;
-    padding-left: 9px;
-    font-size: 48px;
-    letter-spacing: 1.44px;
-  }
-} */
 .super-games__image-wrapper {
   background-color: #102654;
 }
@@ -2802,117 +2765,6 @@ button,
 @media (max-width: 767px) {
   .super-games__banner-text {
     margin-bottom: 31px;
-  }
-}
-
-/* .super-games__date-and-time {
-  display: flex;
-  flex-direction: column;
-  gap: 19px;
-  font-family: $ff-roboto-condensed;
-
-  @include vp-1199 {
-    gap: 7px;
-  }
-} */
-/* .super-games__date-wrapper,
-.super-games__time-wrapper {
-  margin: 0;
-  width: fit-content;
-} */
-.super-games__date-title,
-.super-games__time-title {
-  padding-bottom: 5px;
-  display: block;
-  width: 100%;
-  position: relative;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 150%;
-}
-.super-games__date-title::before,
-.super-games__time-title::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #ffffff;
-}
-@media (max-width: 1199px) {
-  .super-games__date-title,
-.super-games__time-title {
-    padding-bottom: 2px;
-    font-size: 12px;
-  }
-}
-
-.super-games__date-info {
-  margin-top: 5px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: -webkit-min-content auto;
-  -ms-grid-columns: min-content auto;
-  grid-template-columns: -webkit-min-content auto;
-  grid-template-columns: min-content auto;
-  -ms-grid-rows: (20px)[2];
-  grid-template-rows: repeat(2, 20px);
-  gap: 0 8px;
-}
-.super-games__date-info dd {
-  margin-left: 0;
-}
-@media (max-width: 1199px) {
-  .super-games__date-info {
-    -ms-grid-rows: (11px)[2];
-    grid-template-rows: repeat(2, 11px);
-    margin-top: 4px;
-    gap: 0 3px;
-  }
-}
-
-.super-games__time {
-  margin-top: -5px;
-}
-@media (max-width: 1199px) {
-  .super-games__time {
-    margin-top: -4px;
-  }
-}
-
-.super-games__date-day {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  grid-row: 1/-1;
-}
-
-.super-games__date-day,
-.super-games__time {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 150%;
-}
-@media (max-width: 1199px) {
-  .super-games__date-day,
-.super-games__time {
-    font-size: 24px;
-  }
-}
-
-.super-games__date-month,
-.super-games__date-year {
-  font-size: 14px;
-  line-height: 150%;
-}
-@media (max-width: 1199px) {
-  .super-games__date-month,
-.super-games__date-year {
-    font-size: 10px;
   }
 }
 
@@ -2965,7 +2817,7 @@ button,
   background-color: #ffffff;
 }
 .trainers .container {
-  padding: 0 105px 94px;
+  padding: 0 105px 105px;
 }
 @media (max-width: 1199px) {
   .trainers .container {
@@ -2990,7 +2842,7 @@ button,
 
 .trainers__title {
   margin-top: 0;
-  margin-bottom: 47px;
+  margin-bottom: 49px;
   font-weight: 600;
   font-size: 54px;
   line-height: normal;
@@ -3318,7 +3170,7 @@ button,
   background-color: #f8f9fc;
 }
 .advantages .container {
-  padding: 119px 165px;
+  padding: 108px 165px 129px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3351,7 +3203,6 @@ button,
 @media (max-width: 1199px) {
   .advantages h2 {
     margin-bottom: 45px;
-    padding-right: 23px;
     font-size: 42px;
     letter-spacing: 1.26px;
   }
@@ -3359,7 +3210,6 @@ button,
 @media (max-width: 767px) {
   .advantages h2 {
     margin-bottom: 53px;
-    padding-right: 18px;
     font-size: 32px;
     letter-spacing: 0.96px;
   }
@@ -3630,17 +3480,22 @@ button,
     padding: 0 10px;
   }
 }
+@media (max-width: 767px) {
+  .advantages__item--alt p {
+    padding: 0;
+  }
+}
 @media (max-width: 1199px) {
   .advantages__item--alt {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 442px;
     grid-column: 1/-1;
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
     padding: 40px 105px 37px;
     margin-bottom: 4px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
     height: auto;
     gap: 15px;
   }
@@ -3661,7 +3516,7 @@ button,
   background-color: #ffffff;
 }
 .sales .container {
-  padding: 146px 103px 120px;
+  padding: 136px 103px 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3694,7 +3549,6 @@ button,
 @media (max-width: 1199px) {
   .sales h2 {
     margin-bottom: 40px;
-    padding-right: 5px;
     font-size: 42px;
     letter-spacing: 1.26px;
   }
@@ -3894,7 +3748,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 39px;
+  gap: 40px;
 }
 @media (max-width: 1199px) {
   .sales__cards-list {
@@ -3995,7 +3849,6 @@ button,
   -ms-flex-item-align: end;
       align-self: flex-end;
   position: relative;
-  padding: 2px 0;
   font-weight: 700;
   font-size: 12px;
   line-height: normal;
@@ -4005,7 +3858,7 @@ button,
 }
 .sale-card__link::before {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   content: "";
   width: 100%;
@@ -4110,7 +3963,7 @@ button,
 }
 @media (max-width: 767px) {
   .faq__tabs {
-    gap: 27px;
+    gap: 31px;
   }
 }
 
@@ -4742,7 +4595,7 @@ button,
   background-color: #ffffff;
 }
 .contacts .container {
-  padding: 57px 110px 63px 124px;
+  padding: 57px 110px 62px 124px;
   position: relative;
 }
 .contacts .container::before {
