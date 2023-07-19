@@ -5,12 +5,17 @@
   color: $color-default-white;
 }
 
+.navigation__tel-wrapper {
+  max-width: 160px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .navigation__tel {
-  width: 154px;
-  max-width: 300px;
   margin-top: -12px;
   font-size: 26px;
   letter-spacing: 0.76px;
+  line-height: 150%;
   color: $color-default-white;
 
   &:hover,
@@ -23,8 +28,6 @@
   }
 
   @include vp-1199 {
-    max-width: 154px;
-    width: fit-content;
     margin-top: -3px;
     font-size: 24px;
   }

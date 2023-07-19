@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: fit-content;
+  width: 100%;
   padding: 54px 69px 62px;
   background-color: $color-default-background;
 
@@ -49,8 +49,11 @@
     }
   }
 
+  @media (max-width: 1362px) {
+    padding: 54px 40px 62px;
+  }
+
   @include vp-1199 {
-    width: 100%;
     padding: 54px 111px 61px;
   }
 

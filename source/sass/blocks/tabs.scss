@@ -55,12 +55,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 
   @include vp-1199 {
+    grid-template-columns: 1fr;
     gap: 42px;
   }
 
