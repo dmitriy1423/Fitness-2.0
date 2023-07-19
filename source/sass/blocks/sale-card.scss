@@ -7,7 +7,7 @@
   font-family: $ff-roboto-condensed;
 
   @include vp-1199 {
-    max-width: 324px;
+    max-width: 100%;
     height: 100%;
   }
 }
@@ -19,7 +19,7 @@
   background-color: $color-default-background;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content min-content auto;
+  grid-template-rows: repeat(3, min-content);
 
   h3 {
     height: fit-content;
@@ -35,15 +35,15 @@
 
   p {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 71px;
     line-height: 140%;
 
     @include vp-1199 {
-      margin-bottom: 0;
+      margin-bottom: 50px;
     }
 
     @include vp-767 {
-      margin-bottom: 23px;
+      margin-bottom: 25px;
     }
   }
 

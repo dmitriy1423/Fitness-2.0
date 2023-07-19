@@ -21,12 +21,13 @@ function initSliders() {
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 25,
+        spaceBetween: 30,
       },
       1200: {
         slidesPerView: 3,
+        spaceBetween: 30,
       },
-      1300: {
+      1330: {
         slidesPerView: 4,
       },
     },

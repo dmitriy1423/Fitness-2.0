@@ -45,6 +45,20 @@
 
 .trainers__slider {
   position: relative;
+  max-width: 1156px;
+  margin: 0 auto;
+
+  @media (max-width: 1329px) {
+    max-width: 800px;
+  }
+
+  @include vp-1199 {
+    max-width: 566px;
+  }
+
+  @include vp-767 {
+    max-width: 226px;
+  }
 }
 
 .trainers__items {

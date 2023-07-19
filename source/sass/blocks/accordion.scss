@@ -4,13 +4,14 @@
   border-top: 1px solid rgba(28, 51, 116, 0.2);
   border-bottom: 1px solid rgba(28, 51, 116, 0.2);
 
-  &__icon {
+  &__btn {
     position: relative;
     width: 42px;
     height: 42px;
     border-radius: 50%;
     background-color: $color-icon-light;
     border: 1px solid $color-icon-dark;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -42,31 +43,49 @@
       }
     }
 
+    &:hover,
+    &:focus {
+      background-color: $color-icon-dark;
+      border: 1px solid $color-icon-light;
+
+      &::before {
+        background-color: $color-icon-light;
+      }
+
+      &::after {
+        background-color: $color-icon-light;
+      }
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.3;
+      background-color: $color-icon-light;
+      border: 1px solid $color-icon-dark;
+
+      &::before {
+        background-color: $color-icon-dark;
+      }
+
+      &::after {
+        background-color: $color-icon-dark;
+      }
+    }
+
     @include vp-767 {
       width: 32px;
       height: 32px;
     }
   }
 
-  &__element:last-child {
-    margin-bottom: 0;
-    padding-bottom: 24px;
-
-    @include vp-767 {
-      padding-bottom: 20px;
-    }
-  }
-
   &__element {
     margin-bottom: 0;
-    padding: 25px 0 24px;
+    padding: 25px 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    transition: all 0.3s ease;
 
     p {
-      padding: 10px 23% 0 0;
+      padding-right: 23%;
       margin-top: 0;
       margin-bottom: -2px;
       font-family: $ff-roboto-condensed;
@@ -74,20 +93,30 @@
       font-size: 18px;
       line-height: 140%;
 
-      @include vp-1199 {
-        padding: 8px 23% 0 0;
-      }
-
       @include vp-767 {
-        padding: 12px 0 0 0;
+        padding-right: 0;
         font-size: 16px;
       }
     }
 
-    &[open] {
-      padding: 25px 0;
+    &.is-active {
+      gap: 8px;
 
-      .accordion__icon {
+      .accordion__btn {
+        background-color: $color-icon-light;
+        border: 1px solid $color-icon-dark;
+
+        &::before {
+          background-color: $color-icon-dark;
+        }
+
+        &::after {
+          content: none;
+        }
+      }
+
+      .accordion__btn:hover,
+      .accordion__btn:focus {
         background-color: $color-icon-dark;
         border: 1px solid $color-icon-light;
 
@@ -107,74 +136,48 @@
 
     @include vp-1199 {
       padding: 25px 0 24px;
-      gap: 8px;
+
+      &.is-active {
+        gap: 9px;
+      }
     }
 
     @include vp-767 {
       padding: 20px 0;
-      gap: 12px;
 
-      &[open] {
-        padding: 20px 0;
+      &.is-active {
+        gap: 12px;
       }
     }
   }
 
-  &__button {
+  &__title {
     padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     font-family: $ff-roboto-condensed;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 120%;
     text-align: left;
     color: $color-default-black;
     background-color: transparent;
     border: none;
     outline: none;
-    cursor: pointer;
 
-    &:hover,
-    &:focus {
-      .accordion__icon {
-        background-color: $color-icon-dark;
-        border: 1px solid $color-icon-light;
+    h3 {
+      margin: 0;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 120%;
 
-        &::before {
-          background-color: $color-icon-light;
-        }
-
-        &::after {
-          background-color: $color-icon-light;
-        }
-      }
-    }
-
-    &:disabled {
-      pointer-events: none;
-
-      .accordion__icon {
-        opacity: 0.3;
-        background-color: $color-icon-light;
-        border: 1px solid $color-icon-dark;
-
-        &::before {
-          background-color: $color-icon-dark;
-        }
-
-        &::after {
-          background-color: $color-icon-dark;
-        }
+      @include vp-767 {
+        font-size: 18px;
       }
     }
 
     @include vp-767 {
       display: grid;
       grid-template-columns: repeat(2, auto);
-      font-size: 18px;
       gap: 20px;
     }
   }

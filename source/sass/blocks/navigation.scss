@@ -6,6 +6,7 @@
 }
 
 .navigation__tel {
+  width: 154px;
   max-width: 300px;
   margin-top: -12px;
   font-size: 26px;
@@ -22,6 +23,8 @@
   }
 
   @include vp-1199 {
+    max-width: 154px;
+    width: fit-content;
     margin-top: -3px;
     font-size: 24px;
   }

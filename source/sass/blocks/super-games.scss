@@ -1,12 +1,12 @@
 .super-games {
-  max-width: 100%;
+  width: 100%;
   color: $color-default-white;
   background-color: $color-default-background;
 
   .container {
     padding: 120px 103px 106px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
 
     @include vp-1199 {
       padding: 100px 45px;
@@ -14,8 +14,7 @@
 
     @include vp-767 {
       padding: 70px 15px 64px;
-      flex-direction: column;
-      align-items: center;
+      grid-template-columns: minmax(290px, 1fr);
     }
   }
 }
@@ -24,10 +23,15 @@
   padding: 80px 79px 87px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: $color-background-banner;
 
   @include vp-1199 {
     padding: 46px 45px;
+  }
+
+  @media (max-width: 800px) {
+    justify-content: stretch;
   }
 
   @include vp-767 {
@@ -148,10 +152,6 @@
     grid-template-columns: 117px auto;
     gap: 30px;
   }
-
-  @include vp-767 {
-    justify-content: space-between;
-  }
 }
 
 .super-games__image-wrapper {
@@ -161,13 +161,10 @@
     width: 100%;
     height: 100%;
   }
-
-  @include vp-767 {
-    height: 292px;
-  }
 }
 
 .super-games__banner-text {
+  align-self: flex-start;
   margin-bottom: 45px;
   font-family: $ff-roboto-condensed;
   font-size: 18px;
@@ -184,5 +181,11 @@
 
   @include vp-767 {
     margin-bottom: 31px;
+  }
+}
+
+.super-games__banner-button {
+  @include vp-1199 {
+    align-self: stretch;
   }
 }

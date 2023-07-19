@@ -30,7 +30,8 @@
   width: auto;
   height: auto;
 
-  &:hover {
+  &:hover,
+  &:focus {
     figcaption {
       display: none;
 
@@ -43,7 +44,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 53px 45px 53px 56px;
+      padding: 53px 45px 50px 56px;
       top: 0;
       left: 0;
       width: auto;
@@ -74,27 +75,48 @@
 }
 
 .trainer__info-wrapper {
+  overflow-y: scroll;
+  scrollbar-width: none;
   display: none;
   position: absolute;
   top: 0;
   left: 0;
 
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
   h3 {
     margin-top: 0;
     margin-bottom: 0;
+    padding-right: 10px;
     font-size: 18px;
     line-height: 150%;
     text-align: center;
+
+    @include vp-1199 {
+      padding-right: 20px;
+    }
+
+    @include vp-767 {
+      padding-right: 0;
+    }
   }
 
   span {
     margin-top: -5px;
     margin-bottom: 33px;
+    padding-right: 10px;
     font-size: 16px;
     color: #b6bdcc;
 
+    @include vp-1199 {
+      padding-right: 23px;
+    }
+
     @include vp-767 {
       margin-bottom: 34px;
+      padding-right: 0;
     }
   }
 }
@@ -114,7 +136,8 @@
       color: $color-default-white;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       .trainer__info-wrapper {
         display: flex;
         flex-direction: column;
@@ -143,7 +166,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 42px 26px 53px 26px;
+      padding: 42px 26px 40px;
       top: 0;
       left: 0;
       width: auto;

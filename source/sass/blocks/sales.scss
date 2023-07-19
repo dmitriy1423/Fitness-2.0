@@ -39,8 +39,9 @@
 }
 
 .sales__content-wrapper {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 560px 1fr;
   gap: 40px;
 
   @include vp-1199 {
@@ -49,9 +50,7 @@
   }
 
   @include vp-767 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -69,7 +68,7 @@
   }
 
   @include vp-767 {
-    width: fit-content;
+    width: 100%;
     flex-direction: column;
     align-items: center;
   }
@@ -181,6 +180,11 @@
 
   img {
     height: 100%;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    width: 100%;
   }
 }
 
@@ -190,17 +194,19 @@
   margin: 0;
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  flex-direction: column;
+  gap: 41px;
 
   @include vp-1199 {
     grid-column: 1 / -1;
     grid-row: 2 / -1;
     gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @include vp-767 {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 31px;
   }
 }
