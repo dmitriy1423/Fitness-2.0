@@ -1,18 +1,14 @@
 .navigation {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   color: $color-default-white;
 }
 
-.navigation__tel-wrapper {
-  max-width: 160px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .navigation__tel {
   margin-top: -12px;
+  grid-column: 2 / -1;
+  justify-self: flex-end;
   font-size: 26px;
   letter-spacing: 0.76px;
   line-height: 150%;
@@ -37,4 +33,9 @@
     font-size: 20px;
     letter-spacing: 0.4px;
   }
+}
+
+.navigation__logo {
+  grid-column: 1 / 2;
+  margin-right: 30px;
 }
