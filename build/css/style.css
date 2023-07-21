@@ -4124,14 +4124,14 @@ button,
     width: 12px;
   }
 }
-.accordion__btn:hover, .accordion__btn:focus {
+.accordion__btn:hover, .accordion__btn:focus-visible {
   background-color: #102654;
   border: 1px solid #ffffff;
 }
-.accordion__btn:hover::before, .accordion__btn:focus::before {
+.accordion__btn:hover::before, .accordion__btn:focus-visible::before {
   background-color: #ffffff;
 }
-.accordion__btn:hover::after, .accordion__btn:focus::after {
+.accordion__btn:hover::after, .accordion__btn:focus-visible::after {
   background-color: #ffffff;
 }
 .accordion__btn:disabled {
@@ -4192,16 +4192,16 @@ button,
   content: none;
 }
 .accordion__element.is-active .accordion__btn:hover,
-.accordion__element.is-active .accordion__btn:focus {
+.accordion__element.is-active .accordion__btn:focus-visible {
   background-color: #102654;
   border: 1px solid #ffffff;
 }
 .accordion__element.is-active .accordion__btn:hover::before,
-.accordion__element.is-active .accordion__btn:focus::before {
+.accordion__element.is-active .accordion__btn:focus-visible::before {
   background-color: #ffffff;
 }
 .accordion__element.is-active .accordion__btn:hover::after,
-.accordion__element.is-active .accordion__btn:focus::after {
+.accordion__element.is-active .accordion__btn:focus-visible::after {
   content: none;
 }
 .accordion__element:not(:last-child) {

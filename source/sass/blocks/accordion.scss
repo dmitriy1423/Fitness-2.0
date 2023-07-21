@@ -44,7 +44,7 @@
     }
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       background-color: $color-icon-dark;
       border: 1px solid $color-icon-light;
 
@@ -116,7 +116,7 @@
       }
 
       .accordion__btn:hover,
-      .accordion__btn:focus {
+      .accordion__btn:focus-visible {
         background-color: $color-icon-dark;
         border: 1px solid $color-icon-light;
 
